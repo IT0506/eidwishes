@@ -1,0 +1,188 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Background */
+.bg {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(#020b3a, #000428);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Moon */
+.moon {
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 20px white;
+}
+.moon::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #020b3a;
+  border-radius: 50%;
+  left: 15px;
+}
+
+/* Stars */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+}
+
+/* Confetti */
+.confetti {
+  position: absolute;
+  top: -10px;
+  width: 6px;
+  height: 6px;
+  background: #66c;
+  border-radius: 50%;
+  animation: fall 6s linear infinite;
+}
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+/* Text */
+.text {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  z-index: 5;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.text h1 {
+  font-size: 60px;
+}
+.text p {
+  font-size: 18px;
+}
+
+/* Mosque */
+.mosque-wrap {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  animation: rise 2s ease;
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.mosque {
+  position: relative;
+  width: 320px;
+  height: 220px;
+}
+
+/* Base */
+.base {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 110px;
+  background: #1e5aa8;
+  border-radius: 10px;
+}
+
+/* Dome */
+.dome {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 100px;
+  background: #2e7bd6;
+  border-radius: 80% 80% 0 0;
+}
+
+/* Crescent */
+.crescent {
+  position: absolute;
+  bottom: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 6px 0 0 gold;
+}
+
+/* Minarets */
+.minaret {
+  position: absolute;
+  bottom: 0;
+  width: 25px;
+  height: 160px;
+  background: #1e5aa8;
+  border-radius: 8px;
+}
+.minaret.left {
+  left: -50px;
+}
+.minaret.right {
+  right: -50px;
+}
+
+/* Arches */
+.arch {
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  height: 70px;
+  background: white;
+  border-radius: 50% 50% 0 0;
+}
+
+/* People */
+.person {
+  position: absolute;
+  bottom: 0;
+  width: 10px;
+  height: 40px;
+  background: white;
+  border-radius: 5px;
+}
+.left-person {
+  left: -90px;
+}
+.right-person {
+  right: -90px;
+}
+
+.sit {
+  position: absolute;
+  bottom: 0;
+  width: 14px;
+  height: 10px;
+  background: white;
+  border-radius: 10px;
+}
